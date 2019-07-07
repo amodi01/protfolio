@@ -36,53 +36,38 @@
   <body>
     <header>
         <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-            <a class="navbar-brand" href="{%url 'home' %}">Who Is Amit Modi?</a>
+            <a class="navbar-brand" href="#">Who Is Amit Modi?</a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
               <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
               <div class="navbar-nav ml-auto">
-                <a class="nav-item nav-link active" href="#">Twitter</a>
+                <a class="nav-item nav-link" href="#">Twitter</a>
                 <a class="nav-item nav-link" href="#">Resume</a>
-                <a class="nav-item nav-link" href={%url 'allblogs' %}>Blog</a>
+                <a class="nav-item nav-link active"  href="#">Blog</a>
                </div>
             </div>
           </nav>
 </header>
 
 <main role="main">
-
-  <section class="jumbotron text-center">
     <div class="container">
-      <h1 class="jumbotron-heading">Hello ! My name is Amit Modi and I am Python,AI and Blockchain Expert!!</h1>
-      <p class="lead text-muted">Blockchain and AI are the best combination with the core of Python! </p>
-      <p>
-        <a href="#" class="btn btn-primary my-2">Hire Amit</a>
-        
-      </p>
-    </div>
-  </section>
-
-  <div class="album py-5 bg-light">
-    <div class="container">
-
-      <div class="row">
-
-        {% for job in jobs.all %}
-        <div class="col-md-4">
-          <div class="card mb-4 box-shadow">
-            <img class="card-img-top" src= {{ job.image.url }}/ >
-            <div class="card-body">
-              <p class="card-text"> {{ job.summary }} </p>
+       
+        <h1 class="text-center pt-3"  > Welcome to my  Blogs </h1>
+        <br/> <br/>
+        <h2> Latest Posts </h2>
+        <hr/>
+        <div class="blog-post">
               
-            </div>
-          </div>
-        </div>
-        {% endfor%}
-       </div>
+                <h2 class="blog-post-title">{{detailb.title}}}</h2>
+                <p class="blog-post-meta">{{detailb.pubdate}}</p>
+        
+                <hr>
+                
+                
+              </div><!-- /.blog-post -->
+        
     </div>
-  </div>
-
 </main>
 
 <footer class="text-muted">
